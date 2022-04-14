@@ -12,7 +12,7 @@ const copySourceCode = () => async () => {
 
 //1.打包样式 2.打包工具方法 2.打包所有组件 3.打包每个组件 4.生成一个组件库 5.发布组件
 export default series(
-    withTaskName("clean", async () => run('rm -rf ./dist')),
+    withTaskName("clean", async () => run('rimraf ./dist')),
     parallel(
         withTaskName("buildPackages", () =>
             run("pnpm run --filter ./packages --parallel build")

@@ -1,6 +1,45 @@
 @use './mixins/mixin.scss' as *;
 .#{$namespace}-button {
-  width: 100px;
-  height: 100px;
-  background-color: blue;
+  outline: none;
+  position: relative;
+  margin: 3px;
+  cursor: pointer;
+  &:active::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0, 0, 0, 5%);
+    border-radius: 4px;
+    animation: 70ms buttonFilter;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes buttonFilter {
+  from {
+    width: 0;
+    height: 0;
+  }
+  to {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.#{$namespace}-button-middle {
+  padding: 6px 12px;
+  font-size: 16px;
+}
+
+.#{$namespace}-button-small {
+  padding: 4px 9px;
+  font-size: 14px;
+}
+
+.#{$namespace}-button-mini {
+  padding: 3px 6px;
+  font-size: 13px;
 }
