@@ -1,7 +1,11 @@
 <template>
-  <l-carousel>
+  <l-carousel direction="vertical" trigger="hover" mousewheel style="width: 500px;height: 500px">
+    <template #prev="slotProps">
+      <div @click="slotProps.prevFun" style="position: relative;left: 0;top: 0;width: 50px;height: 50px;background-color: aqua;z-index: 1">
+      </div>
+    </template>
     <l-carousel-item v-for="(item,index) in carouselData" :key="index">
-      <img :src="item" alt=""/>
+      <img :src="item" alt="" style="width: 500px;height: 500px"/>
     </l-carousel-item>
   </l-carousel>
 </template>

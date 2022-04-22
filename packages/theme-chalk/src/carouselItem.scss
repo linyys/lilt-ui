@@ -3,12 +3,23 @@
   left: 0;
   top: 0;
 }
+
 .l-carousel-item-animation-left {
   animation: carouselItemAnimaLeft 200ms;
 }
+
 .l-carousel-item-animation-right {
-  animation: carouselItemAnimaRight 200ms ;
+  animation: carouselItemAnimaRight 200ms;
 }
+
+.l-carousel-item-animation-down {
+  animation: carouselItemAnimaDown 200ms;
+}
+
+.l-carousel-item-animation-up {
+  animation: carouselItemAnimaUp 200ms;
+}
+
 @keyframes carouselItemAnimaLeft {
   from {
     transform: translateX(100%);
@@ -17,11 +28,30 @@
     transform: translateX(0);
   }
 }
+
 @keyframes carouselItemAnimaRight {
   from {
     transform: translateX(-100%);
   }
   to {
     transform: translateX(0);
+  }
+}
+
+@keyframes carouselItemAnimaUp {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes carouselItemAnimaDown {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
   }
 }

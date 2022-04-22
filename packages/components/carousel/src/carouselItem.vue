@@ -18,7 +18,6 @@ onMounted(() => {
     uid: instance?.uid,
     setIsShow: setIsShow
   })
-  console.log(carouselContext.animationDirection.value)
 })
 </script>
 
