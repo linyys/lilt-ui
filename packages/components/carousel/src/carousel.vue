@@ -31,14 +31,17 @@ import {defineProps, onMounted, ref, provide, Ref} from "vue";
 const items: Ref = ref([])
 const activeItem: Ref = ref(0)
 const carouselItemLength = ref()
+const animationDirection = ref('left')
 const props = defineProps(carouselProps)
 const root = ref<HTMLDivElement>()
 // 上一张
 const prev = () => {
+  animationDirection.value = 'right'
   setActiveItem(activeItem.value - 1)
 }
 // 下一张
 const next = () => {
+  animationDirection.value = 'left'
   setActiveItem(activeItem.value + 1)
 }
 // 添加一个子元素
@@ -65,7 +68,7 @@ onMounted(() => {
   carouselItemLength.value = items.value.length
   items.value[0].setIsShow(true)
 })
-provide('carouselContext',{addItem,carouselItemLength})
+provide('carouselContext',{addItem,carouselItemLength,animationDirection})
 </script>
 <script lang="ts">
 export default {

@@ -11,13 +11,14 @@ const isShow : Ref = ref(false)
 const ani = ref('')
 const setIsShow = (flag: boolean) => {
   isShow.value = flag
-  ani.value = 'l-carousel-item-animation'
+  ani.value = `l-carousel-item-animation-${carouselContext.animationDirection.value}`
 }
 onMounted(() => {
   carouselContext.addItem({
     uid: instance?.uid,
     setIsShow: setIsShow
   })
+  console.log(carouselContext.animationDirection.value)
 })
 </script>
 

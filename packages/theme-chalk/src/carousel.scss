@@ -8,10 +8,6 @@
   height: 300px;
 }
 
-.l-carousel img {
-  width: 100%;
-  height: 100%;
-}
 
 .l-carousel-next-level,
 .l-carousel-prev-level {
@@ -23,6 +19,7 @@
   width: 30px;
   height: 30px;
   background-color: rgba(0,0,0,0.3);
+  z-index: 99;
 }
 .l-carousel-btn-logo {
   position: absolute;

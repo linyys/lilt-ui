@@ -1,9 +1,7 @@
 <template>
   <l-carousel>
-    <l-carousel-item v-for="item in 3" :key="item">
-      <div style="height: 100px;width: 200px;" :style="{backgroundColor: `#${item * 3}${item * 3}${item * 3}` }">
-        {{item}}
-      </div>
+    <l-carousel-item v-for="(item,index) in carouselData" :key="index">
+      <img :src="item" alt=""/>
     </l-carousel-item>
   </l-carousel>
 </template>

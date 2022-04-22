@@ -3,12 +3,23 @@
   left: 0;
   top: 0;
 }
-.l-carousel-item-animation {
-  animation: carouselItemAnima 200ms;
+.l-carousel-item-animation-left {
+  animation: carouselItemAnimaLeft 200ms;
 }
-@keyframes carouselItemAnima {
+.l-carousel-item-animation-right {
+  animation: carouselItemAnimaRight 200ms ;
+}
+@keyframes carouselItemAnimaLeft {
   from {
     transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes carouselItemAnimaRight {
+  from {
+    transform: translateX(-100%);
   }
   to {
     transform: translateX(0);
