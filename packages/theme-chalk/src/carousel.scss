@@ -1,19 +1,19 @@
 @use './mixins/mixin.scss' as *;
 
-.l-carousel {
+.#{$namespace}-carousel {
   position: relative;
   overflow: hidden;
 }
 
-.l-carousel-btn-logo {
+.#{$namespace}-carousel-btn-logo {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-.l-carousel-next-horizontal,
-.l-carousel-prev-horizontal {
+.#{$namespace}-carousel-next-horizontal,
+.#{$namespace}-carousel-prev-horizontal {
   position: absolute;
   top: 50%;
   cursor: pointer;
@@ -25,16 +25,16 @@
   z-index: 1;
 }
 
-.l-carousel-next-horizontal {
+.#{$namespace}-carousel-next-horizontal {
   right: 10px;
 }
 
-.l-carousel-prev-horizontal {
+.#{$namespace}-carousel-prev-horizontal {
   left: 10px;
 }
 
-.l-carousel-next-vertical,
-.l-carousel-prev-vertical {
+.#{$namespace}-carousel-next-vertical,
+.#{$namespace}-carousel-prev-vertical {
   position: absolute;
   left: 50%;
   cursor: pointer;
@@ -46,17 +46,17 @@
   z-index: 1;
 }
 
-.l-carousel-next-vertical {
+.#{$namespace}-carousel-next-vertical {
   bottom: 10px;
   transform: rotate(90deg);
 }
 
-.l-carousel-prev-vertical {
+.#{$namespace}-carousel-prev-vertical {
   top: 10px;
   transform: rotate(90deg);
 }
 
-.l-carousel-dot-vertical {
+.#{$namespace}-carousel-dot-vertical {
   z-index: 1;
   position: absolute;
   top: 50%;
@@ -64,7 +64,7 @@
   transform: translateY(-50%);
 }
 
-.l-carousel-dot-horizontal {
+.#{$namespace}-carousel-dot-horizontal {
   z-index: 1;
   position: absolute;
   bottom: 10px;
@@ -73,16 +73,16 @@
   display: flex;
 }
 
-.l-carousel-dot-horizontal div {
+.#{$namespace}-carousel-dot-horizontal div {
   margin: 0 10px;
 }
 
-.l-carousel-dot-vertical div {
+.#{$namespace}-carousel-dot-vertical div {
   margin: 10px 0;
 }
 
-.l-carousel-dot-content,
-.l-carousel-dot-content-activity {
+.#{$namespace}-carousel-dot-content,
+.#{$namespace}-carousel-dot-content-activity {
   list-style: none;
   width: 10px;
   height: 10px;
@@ -91,7 +91,7 @@
   cursor: pointer;
 }
 
-.l-carousel-dot-content-activity {
+.#{$namespace}-carousel-dot-content-activity {
   background-color: rgba(255, 255, 255, 0.8);
 }
 

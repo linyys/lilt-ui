@@ -1,22 +1,23 @@
-.l-carousel-item {
+@use './mixins/mixin.scss' as *;
+.#{$namespace}-carousel-item {
   position: absolute;
   left: 0;
   top: 0;
 }
 
-.l-carousel-item-animation-left {
+.#{$namespace}-carousel-item-animation-left {
   animation: carouselItemAnimaLeft 200ms;
 }
 
-.l-carousel-item-animation-right {
+.#{$namespace}-carousel-item-animation-right {
   animation: carouselItemAnimaRight 200ms;
 }
 
-.l-carousel-item-animation-down {
+.#{$namespace}-carousel-item-animation-down {
   animation: carouselItemAnimaDown 200ms;
 }
 
-.l-carousel-item-animation-up {
+.#{$namespace}-carousel-item-animation-up {
   animation: carouselItemAnimaUp 200ms;
 }
 
