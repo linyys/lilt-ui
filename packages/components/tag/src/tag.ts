@@ -10,8 +10,10 @@ export const TagProps = {
     closable: {
         type: Boolean,
         default: false
+    },
+    color: {
+        type: Object,
+        default: () => {}
     }
 }
-export const TagEmit = {
-
-}
+export const TagEmit = ['close']

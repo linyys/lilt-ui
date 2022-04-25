@@ -1,0 +1,32 @@
+@use './mixins/mixin.scss' as *;
+.#{$namespace}-card {
+  padding: 10px;
+  border: 1px solid var(--color-border-2);
+}
+.#{$namespace}-card-shadow-always {
+  box-shadow: 3px 3px 8px 0 rgba(0,0,0,0.1);
+}
+.#{$namespace}-card-shadow-hover {
+  transition: box-shadow 0.5s;
+}
+.#{$namespace}-card-shadow-hover:hover {
+  box-shadow: 3px 3px 8px 0 rgba(0,0,0,0.1);
+}
+.#{$namespace}-card-embedded {
+  background-color: var(--color-border-2);
+}
+.#{$namespace}-card-header {
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid var(--color-border-2);
+}
+.#{$namespace}-card-header-title {
+  font-size: 24px;
+  color: var(--color-text-1);
+}
+.#{$namespace}-card-header-extra {
+  float: right;
+}
+.#{$namespace}-card-footer {
+  padding: 10px 0 0 0;
+  border-top: 1px solid var(--color-border-2);
+}
