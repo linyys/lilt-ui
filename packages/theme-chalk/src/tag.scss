@@ -1,1 +1,55 @@
 @use './mixins/mixin.scss' as *;
+
+.#{$namespace}-tag {
+  margin: 2px;
+  display: inline-block;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: default;
+}
+.#{$namespace}-tag-middle {
+  padding: 5px 4px;
+}
+.#{$namespace}-tag-small {
+  padding: 2px 3px;
+}
+.#{$namespace}-tag-large {
+  padding: 7px 6px;
+}
+
+.#{$namespace}-tag-default {
+  color: #333639;
+  border: 1px solid #333639;
+  background-color: #FAFAFC;
+  fill: #333639;
+}
+
+.#{$namespace}-tag-error {
+  color: #d03050;
+  border: 1px solid #d03050;
+  background-color: #d0305014;
+  fill: #d03050;
+}
+
+.#{$namespace}-tag-info {
+  color: #2080f0;
+  border: 1px solid #2080f0;
+  background-color: #2080f01a;
+  fill: #2080f0;
+}
+.#{$namespace}-tag-success {
+  color: #18a058;
+  border: 1px solid #18a058;
+  background-color: #18a0581a;
+  fill: #18a058;
+}
+.#{$namespace}-tag-warning {
+  color: #f0a020;
+  border: 1px solid #f0a020;
+  background-color: #f0a0201f;
+  fill: #f0a020;
+}
+.l-tag-closable {
+  margin-left: 5px;
+  cursor: pointer;
+}

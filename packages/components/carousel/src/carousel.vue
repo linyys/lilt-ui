@@ -1,7 +1,7 @@
 <template>
   <div class="l-carousel" ref="root" @mouseenter=" props.arrow === 'none' ? false : arrow = true"
        @mouseleave="props.arrow === 'always'? false : arrow = false"
-       @mousemove="props.mousewheel ? mousewheelFun : false"
+       @mousewheel.prevent="props.mousewheel ? mousewheelFun : false"
   >
     <transition :name="`prev-${props.direction}`">
       <div @click="prev" v-show="arrow" :class="`l-carousel-prev-${props.direction}`">
@@ -64,11 +64,13 @@ const next = () => {
 const addItem = (item: any) => {
   items.value.push(item)
 }
+// 监听滚动
 const mousewheelFun = (e) => {
   if (timer) {
     return
   }
   timer = setTimeout(() => {
+    e.preventDefault()
     if (e.deltaY > 0) {
       setActiveItem(activeItem.value + 1)
     } else {
