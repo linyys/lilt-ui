@@ -1,15 +1,8 @@
 <template>
-  <l-tag size="small">标签标签标签标签</l-tag>
-  <l-tag type="success" closable >标签标签标签标签</l-tag>
-  <l-tag type="info" size="large">标签标签标签标签</l-tag>
-  <l-tag type="error" :color="{ bcColor: '#BBB', textColor: '#555', borderColor: '#555' }">标签标签标签标签</l-tag>
-  <l-tag type="warning" closable @close="fun">标签标签标签标签</l-tag>
-  <l-card shadow="hover">
-   <template #footer>
-     底部
-   </template>
-    111
-  </l-card>
+  <l-button @click="fun">暗</l-button>
+  <div>
+
+  </div>
 </template>
 <script setup lang="ts">
 const carouselData = [

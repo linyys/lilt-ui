@@ -1,0 +1,26 @@
+@use './mixins/mixin.scss' as *;
+
+.#{$namespace}-divider {
+  width: 100%;
+  height: 1px;
+  margin: 15px 0;
+}
+
+.#{$namespace}-divider-line-left {
+  width: 100%;
+  height: 1px;
+}
+
+.#{$namespace}-divider-line-right {
+  width: 100%;
+  height: 1px;
+}
+
+.#{$namespace}-divider,
+.#{$namespace}-divider-text {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin-left: 12px;
+  margin-right: 12px;
+}

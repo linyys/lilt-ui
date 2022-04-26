@@ -1,5 +1,5 @@
 <template>
-  <div class="l-card" :class="[props.embedded === false ? `l-card-shadow-${props.shadow}` : 'l-card-embedded']">
+  <div class="l-card" :style="props.bordered ? '' : 'border: 0;' " :class="[props.embedded === false ? `l-card-shadow-${props.shadow}` : 'l-card-embedded']">
     <div class="l-card-header" v-if="props.title.length > 0 || (this.$slots.extra && this.$slots.extra())">
       <span class="l-card-header-title">{{ props.title }}</span>
       <span class="l-card-header-extra">
@@ -25,5 +25,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

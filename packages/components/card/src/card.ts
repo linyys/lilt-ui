@@ -10,5 +10,9 @@ export const cardProps = {
     title: {
         type: String,
         default: ''
+    },
+    bordered: {
+        type: Boolean,
+        default: true
     }
 }

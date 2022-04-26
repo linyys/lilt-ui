@@ -1,8 +1,7 @@
 <template>
   <div :class="['l-tag',`l-tag-${props.type}`,`l-tag-${props.size}`]" :style="colorStyle" >
-    <div>
-      <slot name="headImg
-"></slot>
+    <div v-if="this.$slots.avatar && this.$slots.avatar()" class="l-tag-avatar">
+      <slot name="avatar"></slot>
     </div>
     <slot/>
     <svg v-if="props.closable" @click="closeEmit" x="1650861025999" class="icon l-tag-closable" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="10"
@@ -15,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import {defineEmits, defineProps, onMounted} from "vue";
+import {defineEmits, defineProps} from "vue";
 import {TagProps,TagEmit} from "./tag";
 
 const props = defineProps(TagProps)
