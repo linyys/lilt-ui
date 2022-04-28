@@ -12,6 +12,10 @@ body {
   --color-border-2: #E5E6EB; //二级边框
   --color-border-3: #F2F3F5; //三级边框
   --color-border-4: #F7F8FA; //四级边框
+  --lilt-success: #18A058; //lilt绿
+  --lilt-error: #D03050; //lilt红
+  --lilt-warning: #F0A020; //lilt橙
+  --lilt-info: #2080f0 //lilt蓝
 }
 
 body[lilt-theme="dark"] {
@@ -28,7 +32,12 @@ body[lilt-theme="dark"] {
   --color-border-2: #2E2E30;
   --color-border-3: #484849;
   --color-border-4: #5F5F60;
+  --lilt-success: #3FB371;
+  --lilt-error: #D95369;
+  --lilt-warning: #F3B745;
+  --lilt-info: #40A9E5;
 }
+
 body {
   background-color: var(--bg-color-1);
 }
