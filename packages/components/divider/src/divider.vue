@@ -16,7 +16,6 @@
 
 <script setup lang="ts">
 import {dividerProps} from "./divider";
-import {defineProps} from "vue";
 
 const props = defineProps(dividerProps)
 </script>

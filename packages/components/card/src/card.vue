@@ -15,7 +15,6 @@
 
 <script lang="ts" setup>
 import {cardProps} from './card'
-import {defineProps} from "vue";
 const props = defineProps(cardProps)
 </script>
 <script lang="ts">

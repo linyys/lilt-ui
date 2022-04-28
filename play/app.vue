@@ -1,7 +1,9 @@
 <template>
   <l-button @click="fun">暗</l-button>
   <div>
-    <l-switch v-model="switchData"></l-switch>
+    <l-switch v-model="switchData">
+    </l-switch>
+<!--    <l-switch v-model="switchData" square></l-switch>-->
   </div>
 </template>
 <script setup lang="ts">
@@ -15,6 +17,11 @@ const carouselData = [
 ]
 const switchData = ref(false)
 const fun = () => {
-  document.body.setAttribute('lilt-theme','dark')
+  if(switchData.value){
+    document.body.setAttribute('lilt-theme','dark')
+  }else  {
+    document.body.removeAttribute('lilt-theme')
+  }
+
 }
 </script>

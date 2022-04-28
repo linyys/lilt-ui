@@ -42,7 +42,7 @@
 <script setup lang="ts">
 import
 {carouselProps} from "./carousel";
-import {defineProps, onMounted, ref, provide, Ref} from "vue";
+import {onMounted, ref, provide, Ref} from "vue";
 
 const props = defineProps(carouselProps)
 

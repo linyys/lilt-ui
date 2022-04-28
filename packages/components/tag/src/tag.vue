@@ -14,7 +14,6 @@
 </template>
 
 <script setup lang="ts">
-import {defineEmits, defineProps} from "vue";
 import {TagProps,TagEmit} from "./tag";
 
 const props = defineProps(TagProps)

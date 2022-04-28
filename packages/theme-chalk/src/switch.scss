@@ -1,12 +1,15 @@
 @use './mixins/mixin.scss' as *;
 .#{$namespace}-switch {
   position: relative;
-  width: 58px;
+  min-width: 58px;
   height: 26px;
   display: inline-flex;
   cursor: pointer;
   border-radius: 25px;
   transition: background-color 0.5s;
+  transition-timing-function: cubic-bezier(1,0,0.4,1);
+  margin: 2px;
+  padding: 1px;
 }
 .#{$namespace}-switch-input {
   opacity: 0;
@@ -23,10 +26,15 @@
   position: absolute;
   top: 50%;
   transform: translate(0,-50%);
-  background-color: var(--bg-color-5);
+  background-color: var(--color-border-4);
   border-radius: 25px;
-  transition: left 0.5s;
+  transition: left 0.5s,width 0.5s;
   transition-timing-function: cubic-bezier(1,0,0.4,1);
-  box-shadow:  -24px 24px 60px #c2c2c2,
-  24px -24px 60px #ffffff;
+}
+.#{$namespace}-switch-active-text {
+
+}
+
+.#{$namespace}-switch-unactive-text {
+
 }

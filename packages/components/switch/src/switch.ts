@@ -8,7 +8,7 @@ export const switchProps = {
     },
     inactiveColor: {
         type: String,
-        default: 'var(--color-border-2)'
+        default: 'var(--color-border-1)'
     },
     square: {
         type: Boolean,

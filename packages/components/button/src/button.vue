@@ -5,7 +5,7 @@
   </button>
 </template>
 <script lang="ts" setup>
-import {defineProps, onMounted, ref} from "vue";
+import { ref} from "vue";
 import {buttonProps} from "./button";
 
 const _ref = ref<HTMLButtonElement>()
