@@ -22,6 +22,5 @@ const fun = () => {
   }else  {
     document.body.removeAttribute('lilt-theme')
   }
-
 }
 </script>

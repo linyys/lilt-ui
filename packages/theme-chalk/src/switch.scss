@@ -28,7 +28,7 @@
   transform: translate(0,-50%);
   background-color: var(--color-border-4);
   border-radius: 25px;
-  transition: left 0.5s,width 0.5s;
+  transition: left 0.5s;
   transition-timing-function: cubic-bezier(1,0,0.4,1);
 }
 .#{$namespace}-switch-active-text {

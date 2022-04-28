@@ -13,8 +13,6 @@
     <div class="l-switch-ball"
          :style="[{left: props.modelValue ? 'calc(100% - (21px + 21px + 4px) /2)' : ' 2px'},switchRadius]"
     >
-
-
     </div>
   </div>
 </template>
