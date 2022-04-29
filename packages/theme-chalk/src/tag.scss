@@ -25,29 +25,29 @@
 }
 
 .#{$namespace}-tag-error {
-  color: #d03050;
-  border: 1px solid #d03050;
-  background-color: #d0305014;
-  fill: #d03050;
+  color: var(--lilt-error);
+  border: 1px solid var(--lilt-error);
+  background-color: var(--lilt-error-translucent);
+  fill: var(--lilt-error);
 }
 
 .#{$namespace}-tag-info {
-  color: #2080f0;
-  border: 1px solid #2080f0;
-  background-color: #2080f01a;
-  fill: #2080f0;
+  color: var(--lilt-info);
+  border: 1px solid var(--lilt-info);
+  background-color: var(--lilt-info-translucent);
+  fill: var(--lilt-info);
 }
 .#{$namespace}-tag-success {
-  color: #18a058;
-  border: 1px solid #18a058;
-  background-color: #18a0581a;
-  fill: #18a058;
+  color: var(--lilt-success);
+  border: 1px solid var(--lilt-success);
+  background-color: var(--lilt-success-translucent);
+  fill: var(--lilt-success);
 }
 .#{$namespace}-tag-warning {
-  color: #f0a020;
-  border: 1px solid #f0a020;
-  background-color: #f0a0201f;
-  fill: #f0a020;
+  color: var(--lilt-warning);
+  border: 1px solid var(--lilt-warning);
+  background-color: var(--lilt-warning-translucent);
+  fill: var(--lilt-warning);
 }
 .l-tag-closable {
   margin-left: 5px;

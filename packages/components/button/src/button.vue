@@ -1,5 +1,5 @@
 <template>
-  <button class="l-button" @click=" animation()" :style="[buttonSizeStyle,buttonRoundStyle]" ref="_ref"
+  <button class="l-button" @click="animation()" :style="[buttonSizeStyle,buttonRoundStyle]" ref="_ref"
           :class="[`l-button-${props.size}`]">
     <slot></slot>
   </button>

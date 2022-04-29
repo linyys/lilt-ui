@@ -6,4 +6,6 @@ export * from './card';
 export * from './menu';
 export * from './divider';
 export * from './switch';
+export * from './watermark';
+export * from './input';
 // ....

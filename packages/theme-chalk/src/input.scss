@@ -1,0 +1,10 @@
+@use './mixins/mixin.scss' as *;
+.#{$namespace}-input {
+  border: 1px solid var(--color-border-1);
+  padding: 0 10px;
+}
+
+.#{$namespace}-input-internal {
+  border: none;
+  background-color: transparent;
+}

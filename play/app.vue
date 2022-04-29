@@ -1,9 +1,7 @@
 <template>
   <l-button @click="fun">暗</l-button>
   <div>
-    <l-switch v-model="switchData">
-    </l-switch>
-<!--    <l-switch v-model="switchData" square></l-switch>-->
+    <l-input></l-input>
   </div>
 </template>
 <script setup lang="ts">
@@ -15,12 +13,14 @@ const carouselData = [
     'https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg',
     'https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg',
 ]
-const switchData = ref(false)
+const switchData = ref(true)
 const fun = () => {
   if(switchData.value){
     document.body.setAttribute('lilt-theme','dark')
+    switchData.value = false
   }else  {
     document.body.removeAttribute('lilt-theme')
+    switchData.value = true
   }
 }
 </script>

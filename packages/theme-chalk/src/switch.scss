@@ -7,9 +7,10 @@
   cursor: pointer;
   border-radius: 25px;
   transition: background-color 0.5s;
-  transition-timing-function: cubic-bezier(1,0,0.4,1);
+  transition-timing-function: cubic-bezier(1,0,.4,1);
   margin: 2px;
   padding: 1px;
+  overflow: hidden;
 }
 .#{$namespace}-switch-input {
   opacity: 0;
@@ -20,21 +21,29 @@
   height: 0;
   margin: 0;
 }
-.#{$namespace}-switch-ball{
+.#{$namespace}-switch-ball {
   width: 21px;
   height: 21px;
-  position: absolute;
-  top: 50%;
-  transform: translate(0,-50%);
   background-color: var(--color-border-4);
   border-radius: 25px;
-  transition: left 0.5s;
-  transition-timing-function: cubic-bezier(1,0,0.4,1);
+  position: relative;
+  top: 50%;
+  transform: translate(-0,-50%);
+  transition: width 600ms,left 500ms;
+  transition-timing-function: cubic-bezier(1,0,.4,1);
 }
-.#{$namespace}-switch-active-text {
+//.#{$namespace}-switch-internal {
+//  position: relative;
+//  display: flex;
+//  transition: left 500ms;
+//  vertical-align: middle;
+//  transition-timing-function: cubic-bezier(1,0,0.4,1);
+//}
+//.#{$namespace}-switch-active-text {
+//
+//}
+//
+//.#{$namespace}-switch-unactive-text {
+//
+//}
 
-}
-
-.#{$namespace}-switch-unactive-text {
-
-}
