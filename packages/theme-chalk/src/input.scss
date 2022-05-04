@@ -1,10 +1,24 @@
 @use './mixins/mixin.scss' as *;
 .#{$namespace}-input {
   border: 1px solid var(--color-border-1);
-  padding: 0 10px;
+  padding: 4px 10px;
+  height: 24px;
+  border-radius: 4px;
+  transition: border .5s,box-shadow .5s;
+}
+
+.#{$namespace}-input:hover {
+  border: 1px solid var(--lilt-success);
 }
 
 .#{$namespace}-input-internal {
   border: none;
-  background-color: transparent;
+  background: none;
+  outline:none;
+  width: 100%;
+  line-height: 24px;
+  font-size: 17px;
+}
+.#{$namespace}-input:focus {
+  box-shadow: 10px 10px 10px #2080f0;
 }
