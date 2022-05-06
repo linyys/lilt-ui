@@ -1,7 +1,8 @@
 <template>
-  <l-button @click="fun">暗</l-button>
-  <div>
-    <l-streamer/>
+  <div style="width: 100px;height: 100px;position: fixed;left: 40%;top: 40%">
+    <l-streamer>
+      <l-button @click="fun">暗</l-button>
+    </l-streamer>
   </div>
 </template>
 <script setup lang="ts">
@@ -15,7 +16,6 @@ const carouselData = [
 ]
 const switchData = ref(true)
 const fun = () => {
-  console.log(input.value)
   // if(switchData.value){
   //   document.body.setAttribute('lilt-theme','dark')
   //   switchData.value = false
