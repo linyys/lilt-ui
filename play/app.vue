@@ -1,8 +1,7 @@
 <template>
   <l-button @click="fun">暗</l-button>
   <div>
-    <l-input v-model="input" type="text" :maxText="5">
-    </l-input>
+    <l-streamer/>
   </div>
 </template>
 <script setup lang="ts">

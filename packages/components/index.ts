@@ -8,4 +8,5 @@ export * from './divider';
 export * from './switch';
 export * from './watermark';
 export * from './input';
+export * from './streamer'
 // ....
