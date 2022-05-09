@@ -84,7 +84,7 @@ const create = (element) => {
   timer = setInterval(() => {
     cxt.clearRect(0, 0, aw, ah)
     stars.forEach(star => {
-      if(appearTime < 1200){
+      if(appearTime < (props.quantity * 12)){
         star.appear()
         appearTime += 1
       } else {

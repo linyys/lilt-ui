@@ -1,7 +1,7 @@
 <template>
-<div @scroll="fun">
-    <slot></slot>
-</div>
+  <div @scroll="fun">
+    <slot />
+  </div>
 </template>
 
 <script setup lang="ts">

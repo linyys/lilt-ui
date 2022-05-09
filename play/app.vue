@@ -1,8 +1,11 @@
 <template>
   <div style="width: 100px;height: 100px;position: fixed;left: 40%;top: 40%">
-    <l-streamer>
-      <l-button @click="fun">暗</l-button>
-    </l-streamer>
+    <l-button @click="fun" color="#2080f0">一二三</l-button>
+    <l-button @click="fun">四五六</l-button>
+    <l-button @click="fun">七八九</l-button>
+<!--    <l-streamer :quantity="200">-->
+
+<!--    </l-streamer>-->
   </div>
 </template>
 <script setup lang="ts">

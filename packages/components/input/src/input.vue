@@ -1,11 +1,20 @@
 <template>
-  <div class="l-input" ref="inputBox">
-    <slot name="prefix"/>
-    <input :type="props.type" class="l-input-internal" @focus="getFocus" @blur="lostFocus" @input="valueChange($event)" />
+  <div
+    ref="inputBox"
+    class="l-input"
+  >
+    <slot name="prefix" />
+    <input
+      :type="props.type"
+      class="l-input-internal"
+      @focus="getFocus"
+      @blur="lostFocus"
+      @input="valueChange($event)"
+    >
     <span class="l-input-textNum">
       {{ textNum + '/' + props.maxText }}
     </span>
-    <slot name="suffix"/>
+    <slot name="suffix" />
   </div>
 </template>
 <script lang="ts" setup>

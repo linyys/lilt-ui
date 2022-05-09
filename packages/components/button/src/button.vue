@@ -57,3 +57,4 @@ export default {
   name: 'LButton'
 }
 </script>
+<style scoped></style>
