@@ -26,17 +26,17 @@ body {
   --lilt-info-translucent: #2080f01a; /*   lilt半透明蓝   */
 }
 
-body[lilt-theme="dark"] {
+body[lilt-theme='dark'] {
   --bg-color-1: #17171a;
   --bg-color-2: #232324;
   --bg-color-3: #2a2a2b;
   --bg-color-4: #313132;
   --bg-color-5: #373739;
 
-  --color-text-1: #rgba (255, 255, 255, .9);
-  --color-text-2: #rgba (255, 255, 255, .7);
-  --color-text-3: #rgba (255, 255, 255, .5);
-  --color-text-4: #rgba (255, 255, 255, .3);
+  --color-text-1: #rgba (255, 255, 255, 0.9);
+  --color-text-2: #rgba (255, 255, 255, 0.7);
+  --color-text-3: #rgba (255, 255, 255, 0.5);
+  --color-text-4: #rgba (255, 255, 255, 0.3);
 
   --color-border-1: #17171a;
   --color-border-2: #2e2e30;

@@ -6,7 +6,7 @@
   display: inline-flex;
   border: 1px solid var(--color-border-1);
   border-radius: 4px;
-  transition: border .5s,box-shadow .5s;
+  transition: border 0.5s, box-shadow 0.5s;
 }
 
 .#{$namespace}-input:hover {
@@ -16,7 +16,7 @@
 .#{$namespace}-input-internal {
   border: none;
   background: none;
-  outline:none;
+  outline: none;
   line-height: 24px;
   font-size: 17px;
 }

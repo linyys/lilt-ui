@@ -1,14 +1,31 @@
 <template>
-  <div role="switch" class="l-switch"
-       :style="[{backgroundColor : props.modelValue ? props.activeColor : props.inactiveColor},switchRadius]"
-       @click="changeState"
+  <div
+    role="switch"
+    class="l-switch"
+    :style="[
+      {
+        backgroundColor: props.modelValue
+          ? props.activeColor
+          : props.inactiveColor
+      },
+      switchRadius
+    ]"
+    @click="changeState"
   >
-    <input class="l-switch-input"/>
-    <div class="l-switch-ball"
-         :style="[{left: props.modelValue ? 'calc(100% - (21px + 21px + 4px) /2)' : ' 2px'},switchRadius]"
-         ref="ball"
+    <input class="l-switch-input" />
+    <div
+      class="l-switch-ball"
+      :style="[
+        {
+          left: props.modelValue
+            ? 'calc(100% - (21px + 21px + 4px) /2)'
+            : ' 2px'
+        },
+        switchRadius
+      ]"
+      ref="ball"
     >
-      <slot name="ball"/>
+      <slot name="ball" />
     </div>
     <!--      <div v-if="props.modelValue" class="l-switch-active-text">-->
     <!--        <slot name="active-text"/>-->
@@ -19,8 +36,8 @@
   </div>
 </template>
 <script lang="ts" setup>
-import {switchProps, switchEmit} from "./switch";
-import {ref} from "vue";
+import { switchProps, switchEmit } from './switch'
+import { ref } from 'vue'
 
 const props = defineProps(switchProps)
 const emits = defineEmits(switchEmit)
@@ -48,15 +65,12 @@ const changeState = () => {
     }, 300)
     timer = null
   }, 400)
-
 }
 </script>
 <script lang="ts">
 export default {
-  name: "LSwitch"
+  name: 'LSwitch'
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

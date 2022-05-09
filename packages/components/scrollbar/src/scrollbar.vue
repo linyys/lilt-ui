@@ -11,7 +11,6 @@ const fun = () => {
 </script>
 <script lang="ts">
 export default {
-  name: "LScrollbar"
+  name: 'LScrollbar'
 }
 </script>
-

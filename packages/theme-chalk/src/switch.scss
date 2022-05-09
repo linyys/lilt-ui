@@ -7,7 +7,7 @@
   cursor: pointer;
   border-radius: 25px;
   transition: background-color 0.5s;
-  transition-timing-function: cubic-bezier(1,0,.4,1);
+  transition-timing-function: cubic-bezier(1, 0, 0.4, 1);
   margin: 2px;
   padding: 1px;
   overflow: hidden;
@@ -28,9 +28,9 @@
   border-radius: 25px;
   position: relative;
   top: 50%;
-  transform: translate(-0,-50%);
-  transition: width 600ms,left 500ms;
-  transition-timing-function: cubic-bezier(1,0,.4,1);
+  transform: translate(-0, -50%);
+  transition: width 600ms, left 500ms;
+  transition-timing-function: cubic-bezier(1, 0, 0.4, 1);
 }
 //.#{$namespace}-switch-internal {
 //  position: relative;
@@ -46,4 +46,3 @@
 //.#{$namespace}-switch-unactive-text {
 //
 //}
-

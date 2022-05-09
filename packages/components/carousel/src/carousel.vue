@@ -1,48 +1,78 @@
 <template>
-  <div class="l-carousel" ref="root" @mouseenter=" props.arrow === 'none' ? false : arrow = true"
-       @mouseleave="props.arrow === 'always'? false : arrow = false"
-       @mousewheel.prevent="props.mousewheel ? mousewheelFun : false"
+  <div
+    class="l-carousel"
+    ref="root"
+    @mouseenter="props.arrow === 'none' ? false : (arrow = true)"
+    @mouseleave="props.arrow === 'always' ? false : (arrow = false)"
+    @mousewheel.prevent="props.mousewheel ? mousewheelFun : false"
   >
     <transition :name="`prev-${props.direction}`">
-      <div @click="prev" v-show="arrow" :class="`l-carousel-prev-${props.direction}`">
-      <span class="l-carousel-btn-logo">
-        <svg x="1649755292707" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
-             width="12" height="12"
-        ><path
-            d="M747.245 81.064c-28.497-29.315-74.739-29.315-103.307 0l-367.236 378.011c-28.483 29.367-28.483 76.982 0 106.291l367.236 377.997c28.562 29.367 74.806 29.367 103.307 0 28.546-29.325 28.546-76.929 0-106.304l-315.6-324.841 315.599-324.803c28.545-29.367 28.544-76.973 0-106.356l0 0z"
-            fill="#e6e6e6"
-        ></path></svg>
+      <div
+        @click="prev"
+        v-show="arrow"
+        :class="`l-carousel-prev-${props.direction}`"
+      >
+        <span class="l-carousel-btn-logo">
+          <svg
+            x="1649755292707"
+            class="icon"
+            viewBox="0 0 1024 1024"
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+          >
+            <path
+              d="M747.245 81.064c-28.497-29.315-74.739-29.315-103.307 0l-367.236 378.011c-28.483 29.367-28.483 76.982 0 106.291l367.236 377.997c28.562 29.367 74.806 29.367 103.307 0 28.546-29.325 28.546-76.929 0-106.304l-315.6-324.841 315.599-324.803c28.545-29.367 28.544-76.973 0-106.356l0 0z"
+              fill="#e6e6e6"
+            ></path>
+          </svg>
         </span>
       </div>
     </transition>
     <transition :name="`next-${props.direction}`">
-      <div @click="next" v-show="arrow" :class="`l-carousel-next-${props.direction}`">
-      <span class="l-carousel-btn-logo">
-      <svg x="1649755035787" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
-           width="12" height="12"
-      ><path
-          d="M276.755 942.936c28.497 29.315 74.739 29.315 103.307 0l367.236-378.011c28.483-29.367 28.483-76.982 0-106.291l-367.236-377.997c-28.562-29.367-74.806-29.367-103.307 0-28.546 29.325-28.546 76.929 0 106.304l315.6 324.841-315.599 324.803c-28.545 29.367-28.544 76.973 0 106.356l0 0z"
-          fill="#e6e6e6"
-      ></path></svg>
-      </span>
+      <div
+        @click="next"
+        v-show="arrow"
+        :class="`l-carousel-next-${props.direction}`"
+      >
+        <span class="l-carousel-btn-logo">
+          <svg
+            x="1649755035787"
+            class="icon"
+            viewBox="0 0 1024 1024"
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+          >
+            <path
+              d="M276.755 942.936c28.497 29.315 74.739 29.315 103.307 0l367.236-378.011c28.483-29.367 28.483-76.982 0-106.291l-367.236-377.997c-28.562-29.367-74.806-29.367-103.307 0-28.546 29.325-28.546 76.929 0 106.304l315.6 324.841-315.599 324.803c-28.545 29.367-28.544 76.973 0 106.356l0 0z"
+              fill="#e6e6e6"
+            ></path>
+          </svg>
+        </span>
       </div>
     </transition>
-    <slot name="prev" :prevFun="prev"/>
-    <slot name="next" :nextFun="next"/>
-    <slot/>
+    <slot name="prev" :prevFun="prev" />
+    <slot name="next" :nextFun="next" />
+    <slot />
     <div :class="`l-carousel-dot-${props.direction}`">
-      <div :class="index === activeItem ? 'l-carousel-dot-content-activity' : 'l-carousel-dot-content'"
-           v-for="(item,index) in items.length" @mouseenter=" props.trigger === 'hover' ? setActiveItem(index) : false"
-           @click="props.trigger === 'hover' ? false : setActiveItem(index) "
+      <div
+        :class="
+          index === activeItem
+            ? 'l-carousel-dot-content-activity'
+            : 'l-carousel-dot-content'
+        "
+        v-for="(item, index) in items.length"
+        @mouseenter="props.trigger === 'hover' ? setActiveItem(index) : false"
+        @click="props.trigger === 'hover' ? false : setActiveItem(index)"
       ></div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import
-{carouselProps} from "./carousel";
-import {onMounted, ref, provide, Ref} from "vue";
+import { carouselProps } from './carousel'
+import { onMounted, ref, provide, Ref } from 'vue'
 
 const props = defineProps(carouselProps)
 
@@ -66,7 +96,7 @@ const addItem = (item: any) => {
   items.value.push(item)
 }
 // 监听滚动
-const mousewheelFun = (e) => {
+const mousewheelFun = e => {
   if (timer) {
     return
   }
@@ -79,7 +109,6 @@ const mousewheelFun = (e) => {
     }
     timer = null
   }, 300)
-
 }
 // 设置显示的子元素
 const setActiveItem = (index: number | string) => {
@@ -115,14 +144,12 @@ onMounted(() => {
   root.value?.addEventListener('mousewheel', mousewheelFun)
   items.value[0].setIsShow(true)
 })
-provide('carouselContext', {addItem, carouselItemLength, animationDirection})
+provide('carouselContext', { addItem, carouselItemLength, animationDirection })
 </script>
 <script lang="ts">
 export default {
-  name: "LCarousel"
+  name: 'LCarousel'
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

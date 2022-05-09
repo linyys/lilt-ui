@@ -1,3 +1,1 @@
-export const MenuProps = {
-
-}
+export const MenuProps = {}

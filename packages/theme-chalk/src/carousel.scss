@@ -21,7 +21,7 @@
   border-radius: 40%;
   width: 30px;
   height: 30px;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
@@ -42,7 +42,7 @@
   border-radius: 40%;
   width: 30px;
   height: 30px;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
@@ -87,12 +87,12 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 
 .#{$namespace}-carousel-dot-content-activity {
-  background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .prev-horizontal-enter-active {
@@ -123,31 +123,31 @@
 }
 @keyframes carouselPrevHorizontal {
   from {
-    transform: translate(-100%,-50%);
+    transform: translate(-100%, -50%);
   }
   to {
-    transform: translateX(0,-50%);
+    transform: translateX(0, -50%);
   }
 }
 @keyframes carouselNextHorizontal {
   from {
-    transform: translate(100%,-50%);
+    transform: translate(100%, -50%);
   }
   to {
-    transform: translateX(0,-50%);
+    transform: translateX(0, -50%);
   }
 }
 @keyframes carouselPrevVertical {
   from {
-    transform: translate(0,-100%) rotate(90deg) ;
+    transform: translate(0, -100%) rotate(90deg);
   }
   to {
-    transform: translate(0)  rotate(90deg);
+    transform: translate(0) rotate(90deg);
   }
 }
 @keyframes carouselNextVertical {
   from {
-    transform: translate(0,100%) rotate(90deg);
+    transform: translate(0, 100%) rotate(90deg);
   }
   to {
     transform: translate(0) rotate(90deg);

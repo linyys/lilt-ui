@@ -2,10 +2,8 @@
 
 <script lang="ts">
 export default {
-  name: "LMenu"
+  name: 'LMenu'
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
