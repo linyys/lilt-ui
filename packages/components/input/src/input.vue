@@ -3,12 +3,13 @@
     <slot name="prefix" />
     <input
       :type="props.type"
+      :placeholder='props.placeholder'
       class="l-input-internal"
       @focus="getFocus"
       @blur="lostFocus"
       @input="valueChange($event)"
     />
-    <span class="l-input-textNum">
+    <span v-if='props.maxText > 0' class="l-input-textNum">
       {{ textNum + '/' + props.maxText }}
     </span>
     <slot name="suffix" />
@@ -32,7 +33,7 @@ const lostFocus = () => {
 }
 const valueChange = e => {
   const inputValue = e.currentTarget.value
-  if (inputValue.length <= props.maxText) {
+  if (inputValue.length <= props.maxText || props.maxText < 0) {
     textNum.value = inputValue.length
     emits('update:modelValue', inputValue)
   } else {

@@ -1,11 +1,13 @@
 <template>
-  <div style="width: 100px;height: 100px;position: fixed;left: 40%;top: 40%">
-    <l-button @click="fun" color="#2080f0">一二三</l-button>
-    <l-button @click="fun">四五六</l-button>
-    <l-button @click="fun">七八九</l-button>
-<!--    <l-streamer :quantity="200">-->
-
-<!--    </l-streamer>-->
+  <l-button @click='fun'>test中</l-button>
+  <div>
+    <l-menu>
+      <l-sub-menu title='567'>
+        <l-menu-item>
+          子菜单
+        </l-menu-item>
+      </l-sub-menu>
+    </l-menu>
   </div>
 </template>
 <script setup lang="ts">
@@ -19,12 +21,12 @@ const carouselData = [
 ]
 const switchData = ref(true)
 const fun = () => {
-  // if(switchData.value){
-  //   document.body.setAttribute('lilt-theme','dark')
-  //   switchData.value = false
-  // }else  {
-  //   document.body.removeAttribute('lilt-theme')
-  //   switchData.value = true
-  // }
+  if(switchData.value){
+    document.body.setAttribute('lilt-theme','dark')
+    switchData.value = false
+  }else  {
+    document.body.removeAttribute('lilt-theme')
+    switchData.value = true
+  }
 }
 </script>

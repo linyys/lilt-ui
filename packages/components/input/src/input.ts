@@ -8,7 +8,11 @@ export const inputProps = {
   },
   maxText: {
     type: Number,
-    default: Infinity
+    default: -1
+  },
+  placeholder: {
+    type: String,
+    default: ''
   }
 }
 export const inputEmits = ['update:modelValue']

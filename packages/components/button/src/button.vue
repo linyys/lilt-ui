@@ -1,10 +1,10 @@
 <template>
   <button
-    class="l-button"
-    @click="animation()"
-    :style="[buttonSizeStyle, buttonRoundStyle]"
     ref="_ref"
+    class="l-button"
+    :style="[buttonSizeStyle, buttonRoundStyle]"
     :class="[`l-button-${props.size}`]"
+    @click="animation()"
   >
     <slot></slot>
   </button>

@@ -1,12 +1,11 @@
 import { describe, it, expect } from 'vitest'
-import { mount } from '@vue/test-utils'
-import Button from '../src/button.vue'
-
-describe('Button.vue', () => {
-  it('create', () => {
-    const wrapper = mount(Button, {
-      props: { size: 'mini' }
-    })
-    expect(wrapper.classes()).toContain('l-button-mini')
+import { mount, shallowMount } from '@vue/test-utils'
+const hh = {
+  template: '<p class="l-button">{{ msg }}</p>',
+  props: ['msg']
+}
+describe('hello.vue',() => {
+  it('create', async () => {
   })
 })
+

@@ -8,8 +8,7 @@ export default defineConfig({
     },
     test: {
         clearMocks: true,
-        environment: "jsdom",
-        open:true
+        environment: 'jsdom',
         // transformMode: {
         //     web: [/\.[jt]sx$/]
         // }

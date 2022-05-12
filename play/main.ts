@@ -1,8 +1,24 @@
-import { createApp } from "vue";
-import App from "./app.vue";
+import { createApp } from 'vue'
+import App from './app.vue'
 import '@lilt-ui-vue/theme-chalk/src/index.scss'
-import {LButton,LScrollbar,LCarousel,LCarouselItem,LTag,LCard,LMenu,LDivider,LSwitch,LWatermark,LInput,LStreamer} from "@lilt-ui-vue/components";
-const app = createApp(App);
+import {
+  LButton,
+  LScrollbar,
+  LCarousel,
+  LCarouselItem,
+  LTag,
+  LCard,
+  LMenu,
+  LDivider,
+  LSwitch,
+  LWatermark,
+  LInput,
+  LStreamer,
+  LMenuItem,
+  LSubMenu,
+} from '@lilt-ui-vue/components'
+
+const app = createApp(App)
 
 app.use(LButton)
 app.use(LScrollbar)
@@ -16,4 +32,6 @@ app.use(LSwitch)
 app.use(LWatermark)
 app.use(LInput)
 app.use(LStreamer)
-app.mount("#app");
+app.use(LMenuItem)
+app.use(LSubMenu)
+app.mount('#app')
