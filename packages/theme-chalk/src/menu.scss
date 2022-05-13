@@ -13,25 +13,34 @@
 .#{$namespace}-sub-menu-content {
   padding: 5px;
   border-radius: 5px;
+  overflow: hidden;
   &:hover {
     background-color: var(--color-border-2);
   }
 }
-.sub-menu-transition {
-
+.sub-menu-transition-enter-active,
+.sub-menu-transition-leave-active{
+  transition: all .3s ease;
+  max-height: 1000px;
 }
+.sub-menu-transition-enter,
+.sub-menu-transition-leave-to
+{
+  opacity: 0;
+  max-height: 0;
+}
+
 
 .#{$namespace}-menu-item,
 .#{$namespace}-menu-item-isActivity{
-
-}
-.#{$namespace}-menu-item {
-  background-color: var(--bg-color-1);
   color: var(--color-text-1);
   padding: 6px;
   font-size: 20px;
   cursor: pointer;
   border-radius: 5px;
+}
+.#{$namespace}-menu-item {
+  background-color: var(--bg-color-1);
   transition: background-color .3s;
   &:hover {
     background-color: var(--color-border-2);

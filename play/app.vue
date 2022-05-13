@@ -5,6 +5,12 @@
       <l-sub-menu title='567'>
         <l-menu-item>
           子菜单
+        </l-menu-item><l-menu-item>
+          子菜单
+        </l-menu-item><l-menu-item>
+          子菜单
+        </l-menu-item><l-menu-item>
+          子菜单
         </l-menu-item>
       </l-sub-menu>
     </l-menu>
