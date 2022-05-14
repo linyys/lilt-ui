@@ -4,30 +4,30 @@
   background-color: white;
 }
 
-
 .#{$namespace}-sub-menu {
-  padding: 7px;
+  //padding: 7px;
   font-size: 20px;
   cursor: pointer;
 }
 .#{$namespace}-sub-menu-content {
-  padding: 5px;
+  padding: 5px 15px;
   border-radius: 5px;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
   &:hover {
     background-color: var(--color-border-2);
   }
 }
-.sub-menu-transition-enter-active,
-.sub-menu-transition-leave-active{
-  transition: all .3s ease;
-  max-height: 1000px;
-}
-.sub-menu-transition-enter,
-.sub-menu-transition-leave-to
-{
-  opacity: 0;
+.#{$namespace}-sub-menu-item {
+  padding: 5px;
+  transition: all .4s;
+  overflow: hidden;
   max-height: 0;
+}
+.#{$namespace}-sub-menu-arrow {
+  transition: all .5s;
+
 }
 
 
