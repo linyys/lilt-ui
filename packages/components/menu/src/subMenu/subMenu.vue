@@ -1,9 +1,12 @@
 <template>
   <div class='l-sub-menu' @click='ChangeActivity'>
     <div class='l-sub-menu-content'>
-      <div class='l-sub-menu-title'>
+      <div
+        class='l-sub-menu-title'
+        :style="menuContext.isActivitySub.value.includes(props.index) ? 'color: var(--lilt-success);':'color: var(--color-text-1);'"
+      >
         <span v-if='($slots.icon && $slots.icon())' class='l-menu-icon'>
-          <slot name='icon'/>
+          <slot name='icon' />
         </span>
         <span>{{ props.title }}</span>
       </div>
@@ -19,7 +22,11 @@
       </div>
     </div>
     <!--    <transition name='sub-menu-transition'>-->
-    <div ref='subMenuBox' class='l-sub-menu-item'>
+    <div
+      ref='subMenuBox'
+      :style="menuContext.isActivitySub.value.includes(props.index) ? {maxHeight: showHeight + 'px',opacity: '1'} : {maxHeight: '0',opacity: '0'}"
+      class='l-sub-menu-item'
+    >
       <slot />
     </div>
     <!--    </transition>-->
@@ -27,10 +34,10 @@
 </template>
 <script lang='ts' setup>
 import { subMenuProps } from './subMenu'
-import { onMounted, provide, Ref, ref } from 'vue'
+import { inject, onMounted, provide, Ref, ref } from 'vue'
 
 const props = defineProps(subMenuProps)
-
+const menuContext: any = inject('menuContext')
 // 保存受控的子菜单
 const menuItems: Ref = ref([])
 // 添加一个子菜单
@@ -39,31 +46,28 @@ const addMenuItem = (item: HTMLElement) => {
 }
 
 // 菜单组应该展开的高度
-let showHeight:Number = 0
+let showHeight: Ref = ref(0)
 const getShowHeight = () => {
   menuItems.value.forEach((item) => {
-    showHeight += item.offsetHeight
+    showHeight.value += item.ref.offsetHeight
   })
 }
 // 控制展开
-const isShow: Ref = ref(false)
 const subMenuBox: Ref = ref()
+const isShow: Ref = ref()
 const ChangeActivity = () => {
-  if (!isShow.value) {
-    subMenuBox.value.style.maxHeight = showHeight + 'px'
-    subMenuBox.value.style.opacity = 1
-    isShow.value = !isShow.value
+  if (menuContext.isActivitySub.value.includes(props.index)) {
+    menuContext.delActivitySub(props.index)
   } else {
-    subMenuBox.value.style.maxHeight = '0px'
-    subMenuBox.value.style.opacity = 0
-    isShow.value = !isShow.value
+    menuContext.setActivitySub(props.index)
   }
 }
 onMounted(() => {
   // console.log(menuItems.value)
   getShowHeight()
+  menuContext.addSubMenu({ index: props.index })
 })
-provide('menuContext', { addMenuItem })
+provide('subMenuContext', { addMenuItem })
 </script>
 <script lang='ts'>
 export default {

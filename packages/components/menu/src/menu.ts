@@ -8,3 +8,4 @@ export const menuProps = {
     default: false
   }
 }
+export const emits = ['itemChange']

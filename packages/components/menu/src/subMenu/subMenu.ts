@@ -6,5 +6,8 @@ export const subMenuProps = {
   disabled: {
     type: Boolean,
     default: false
+  },
+  index: {
+    type: [Number,String],
   }
 }

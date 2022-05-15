@@ -18,7 +18,7 @@
   }
 }
 .#{$namespace}-sub-menu-title {
-  color: var(--lilt-success);
+  transition: color .5s;
   .#{$namespace}-menu-icon {
     margin-right: 5px;
   }
