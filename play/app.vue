@@ -1,36 +1,9 @@
 <template>
-  <l-button @click='fun'>test中</l-button>
+  <l-button @click='start'>start</l-button>
+  <l-button @click='finish'>finish</l-button>
+  <l-button @click='error'>error</l-button>
   <div>
-    <l-menu accordion>
-      <l-sub-menu title='567' index='1'>
-        <l-menu-item index='1-1'>
-          子菜单
-        </l-menu-item>
-        <l-menu-item index='1-2'>
-          子菜单
-        </l-menu-item>
-        <l-menu-item index='1-3'>
-          子菜单
-        </l-menu-item>
-        <l-menu-item index='1-4'>
-          子菜单
-        </l-menu-item>
-      </l-sub-menu>
-      <l-sub-menu title='567' index='2'>
-        <l-menu-item index='2-1'>
-          子菜单
-        </l-menu-item>
-        <l-menu-item index='2-2'>
-          子菜单
-        </l-menu-item>
-        <l-menu-item index='2-3'>
-          子菜单
-        </l-menu-item>
-        <l-menu-item index='2-4'>
-          子菜单
-        </l-menu-item>
-      </l-sub-menu>
-    </l-menu>
+
   </div>
 </template>
 <script setup lang='ts'>
@@ -54,5 +27,14 @@ const fun = (e) => {
   //   document.body.removeAttribute('lilt-theme')
   //   switchData.value = true
   // }
+}
+const start = () => {
+  useLoadingBar.start()
+}
+const finish = () => {
+  useLoadingBar.finish()
+}
+const error = () => {
+  useLoadingBar.error()
 }
 </script>

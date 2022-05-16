@@ -15,15 +15,15 @@ body {
   --color-border-3: #f2f3f5; /* 三级边框  */
   --color-border-4: #f7f8fa; /* 四级边框 */
 
-  --lilt-success: #18a058; /* ilt绿  */
-  --lilt-error: #d03050; /* lilt红  */
-  --lilt-warning: #f0a020; /* lilt橙 */
-  --lilt-info: #2080f0; /*   lilt蓝   */
+  --lilt-success: #24B576; /* ilt绿  */
+  --lilt-error: #F0736E; /* lilt红  */
+  --lilt-warning: #F3B745; /* lilt橙 */
+  --lilt-info: #26B0FF; /*   lilt蓝   */
 
-  --lilt-success-translucent: #18a0581a; /* lilt半透明绿  */
-  --lilt-error-translucent: #d0305014; /* lilt半透明红  */
-  --lilt-warning-translucent: #f0a0201f; /* lilt半透明橙 */
-  --lilt-info-translucent: #2080f01a; /*   lilt半透明蓝   */
+  --lilt-success-translucent: #24B576a; /* lilt半透明绿  */
+  --lilt-error-translucent: #F0736E14; /* lilt半透明红  */
+  --lilt-warning-translucent: #F3B7451f; /* lilt半透明橙 */
+  --lilt-info-translucent: #26B0FF1a; /*   lilt半透明蓝   */
 }
 
 body[lilt-theme='dark'] {
