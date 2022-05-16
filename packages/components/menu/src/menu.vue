@@ -22,7 +22,7 @@ const addSubMenu = item => {
 
 const isActivitySub: Ref = ref([])
 const setActivitySub = (index: String | Number) => {
-  if (props.collapse) {
+  if (props.accordion) {
     isActivitySub.value.length = 0
   }
   isActivitySub.value.push(index)

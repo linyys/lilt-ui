@@ -3,3 +3,4 @@ export const menuItemProps = {
     type: [Number,String],
   }
 }
+export const emits = ['click']

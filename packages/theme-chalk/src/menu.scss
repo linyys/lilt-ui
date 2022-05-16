@@ -9,7 +9,7 @@
 }
 .#{$namespace}-sub-menu-content {
   padding: 5px 15px;
-  border-radius: 5px;
+  border-radius: 2px;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
@@ -40,7 +40,7 @@
   padding: 6px 15px;
   font-size: 18px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 .#{$namespace}-menu-item {
   transition: background-color .3s;

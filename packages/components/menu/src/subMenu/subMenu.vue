@@ -10,7 +10,7 @@
         </span>
         <span>{{ props.title }}</span>
       </div>
-      <div class='l-sub-menu-arrow' :style="isShow ? 'transform: rotate(180deg)':''">
+      <div class='l-sub-menu-arrow' :style="menuContext.isActivitySub.value.includes(props.index) ? 'transform: rotate(180deg)':''">
         <svg
           class='icon' viewBox='0 0 1026 1024' xmlns='http://www.w3.org/2000/svg'
           width='12' height='12'

@@ -9,4 +9,6 @@ export * from './switch'
 export * from './watermark'
 export * from './input'
 export * from './streamer'
+export * from './rate'
+export * from './loadingBar'
 // ....
