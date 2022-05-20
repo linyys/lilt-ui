@@ -5,12 +5,12 @@ interface loadingBar {
   start: Function,
   finish: Function,
   error: Function,
-  dom: HTMLElement | null
 }
-
+let dom:HTMLElement | null = null
+let flag:Boolean = false
 export const useLoadingBar: loadingBar = {
-  dom: null,
   start: function() {
+    flag = false
     const appendTo = document.body
     const container = document.createElement('div')
     if (document.getElementById('l-loading-bar')) {
@@ -24,21 +24,37 @@ export const useLoadingBar: loadingBar = {
     )
     render(vm, container)
     appendTo.appendChild(container.firstElementChild!)
-    this.dom = document.getElementById('l-loading-bar')
+    dom = document.getElementById('l-loading-bar')
+    let timer:any = null
+    timer = setTimeout(() => {
+      if(timer) {
+        clearTimeout(timer)
+      }
+      flag = true
+    },1500)
   },
   finish: function() {
-    if(this.dom !== null) {
-      this.dom.style.maxWidth = '100vw'
-      this.dom.style.width = '100vw'
-      this.dom.style.opacity = '0'
-    }
+    const timer =  setInterval(() => {
+      if(dom !== null && flag) {
+        dom.style.maxWidth = '100vw'
+        dom.style.width = '100vw'
+        dom.style.opacity = '0'
+        flag = false
+        clearInterval(timer)
+      }
+    },100)
+
   },
   error: function() {
-    if(this.dom !== null) {
-      this.dom.style.maxWidth = '100vw'
-      this.dom.style.width = '100vw'
-      this.dom.style.backgroundColor = 'var(--lilt-error)'
-      this.dom.style.opacity = '0'
-    }
+    const timer = setInterval(() => {
+      if(dom !== null && flag) {
+        dom.style.maxWidth = '100vw'
+        dom.style.width = '100vw'
+        dom.style.backgroundColor = 'var(--lilt-error)'
+        dom.style.opacity = '0'
+        flag = false
+        clearInterval(timer)
+      }
+    },100)
   }
 }
