@@ -1,7 +1,7 @@
 {
   "name": "lilt-ui-vue",
   "description": "",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "main": "index.js",
   "scripts": {
     "dev": "pnpm -C play dev",

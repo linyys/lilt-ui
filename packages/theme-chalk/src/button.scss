@@ -1,9 +1,12 @@
 @use './mixins/mixin.scss' as *;
+
 .#{$namespace}-button {
   position: relative;
   margin: 3px;
   outline: none;
   cursor: pointer;
+  transition: box-shadow .5s;
+
   &:active::before {
     display: block;
     content: '';
