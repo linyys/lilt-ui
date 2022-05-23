@@ -10,11 +10,10 @@
   </button>
 </template>
 <script lang='ts' setup>
-import { onBeforeMount, ref } from 'vue'
+import { onBeforeMount, onBeforeUnmount, ref } from 'vue'
 import { buttonProps } from './button'
 
 const _ref = ref<HTMLButtonElement>()
-let interval
 // 控制按钮动画
 const animation = () => {
   if (props.type == 'text') {
@@ -22,18 +21,15 @@ const animation = () => {
   }
 
   let time = 1
-  interval = setInterval(() => {
+  const interval = setInterval(() => {
     time++
-    _ref.value!.style.boxShadow = `0 0 0 ${time}px  ${props.color}${6 - time}5`
+    _ref.value!.style.boxShadow = `0 0 0 ${time}px ${props.color}${6 - time}5`
     if (time === 6) {
       clearInterval(interval)
       _ref.value!.style.boxShadow = ``
     }
   }, 60)
 }
-onBeforeMount(() => {
-  clearInterval(interval)
-})
 const props = defineProps(buttonProps)
 // 大小
 const buttonSizeStyle =
