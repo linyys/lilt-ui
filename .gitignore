@@ -2,3 +2,7 @@ node_modules/
 /dist/
 /coverage/
 /theme-chalk/dist/
+/hook/es/
+/hook/lib/
+/utils/es/
+/utils/lib/

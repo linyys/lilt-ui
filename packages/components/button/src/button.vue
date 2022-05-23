@@ -11,7 +11,7 @@
 </template>
 <script lang='ts' setup>
 import { onBeforeMount, onBeforeUnmount, ref } from 'vue'
-import { buttonProps } from './button.ts'
+import { buttonProps } from './button'
 
 const _ref = ref<HTMLButtonElement>()
 // 控制按钮动画
